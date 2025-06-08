@@ -1,98 +1,100 @@
-# Link Shortener with Ad Pages
+# Professional Link Shortener with Monetization
 
-This is a PHP-based link shortener system with monetization through ad pages. It allows you to create short links that redirect users through a series of ad pages before reaching the final destination.
+A secure and scalable link shortening platform with built-in monetization capabilities. Perfect for businesses and content creators looking to maximize their link sharing revenue.
 
-## Features
+## 🌟 Key Features
 
-- Admin panel for creating and managing short links
-- Customizable number of ad pages (1-3) before final redirection
-- Click tracking for all links
-- Easy Adsterra ad integration
-- Mobile-friendly responsive design
-- Protection against bots
-- Progress bar and security verification visualization
-- Skip waiting button with additional ad monetization
-- Social sharing options
-- Returning visitor detection
+- **Multiple Monetization Options**
+  - Social Bar Integration
+  - Smart Popup System
+  - Banner Placements
+  - Direct Link Monetization
+  - Custom Ad Scripts Support
 
-## Requirements
+- **Advanced User Management**
+  - Role-based Access Control
+  - User-specific Settings
+  - Customizable Permissions
+  - Activity Monitoring
 
-- PHP 7.0 or higher
-- MySQL 5.6 or higher
-- Web server with mod_rewrite enabled (Apache recommended)
+- **Robust Analytics**
+  - Click Tracking
+  - Geographic Data
+  - Device Statistics
+  - Referrer Analysis
+  - Custom Reports
 
-## Installation on Hostinger
+- **Security Features**
+  - Domain Whitelisting
+  - Blacklist Protection
+  - Rate Limiting
+  - Anti-spam Measures
+  - SSL Support
 
-For detailed Hostinger installation instructions, see [hostinger-setup.md](hostinger-setup.md).
+- **Professional UI/UX**
+  - Mobile Responsive
+  - Dark Mode Support
+  - Modern Dashboard
+  - User-friendly Interface
 
-Quick steps:
-1. Create a MySQL database on Hostinger
-2. Update database credentials in `db.php`
-3. Upload all files to your Hostinger hosting
-4. Ensure .htaccess is properly uploaded
-5. Visit your domain to initialize the system
-6. Log in to the admin panel with username `pelupa` and password `Ravi@1327#2613`
+## 🚀 Premium Features
 
-## General Installation
+- Multi-step Redirect System
+- Custom Slug Support
+- API Access
+- Priority Support
+- Advanced Analytics
+- Custom Branding Options
 
-1. **Upload Files**:
-   Upload all files to your web hosting directory (usually public_html).
+## 💼 Perfect For
 
-2. **Database Setup**:
-   - Create a new MySQL database
-   - Edit the `db.php` file with your database credentials:
-     ```php
-     $host = "localhost";
-     $username = "your_database_username";
-     $password = "your_database_password";
-     $database = "your_database_name";
-     ```
+- Digital Marketers
+- Content Creators
+- Affiliate Marketers
+- Online Businesses
+- Media Companies
+- Advertising Networks
 
-3. **Server Configuration**:
-   Make sure your server has mod_rewrite enabled and .htaccess file support.
+## 📋 Requirements
 
-4. **First Run**:
-   - Visit your domain in a web browser
-   - The database tables will be created automatically
-   - The admin user will be created with:
-     - Username: `pelupa`
-     - Password: `Ravi@1327#2613`
+- PHP 7.4+
+- MySQL 5.7+
+- SSL Certificate
+- Modern Web Browser
 
-5. **Admin Login**:
-   - Go to `/admin.php`
-   - Login with the credentials above
+## 🔒 Enterprise Security
 
-## Adsterra Integration
+- Data Encryption
+- Regular Security Updates
+- DDoS Protection
+- Secure Authentication
+- Activity Logging
 
-To integrate Adsterra ads:
+## 🛠️ Installation
 
-1. Sign up for an Adsterra account at [adsterra.com](https://adsterra.com)
-2. Create ad units for your site
-3. The ad codes are already integrated in the following files:
-   - `ad-page.php` - Main ad display during countdown
-   - `ad-redirect.php` - Ad display when skipping the countdown
+1. Purchase a license
+2. Download the package
+3. Follow setup instructions in documentation
+4. Configure your settings
+5. Start monetizing your links
 
-See [adsterra-integration.md](adsterra-integration.md) for detailed instructions on customizing ad placements.
+## 📞 Support & Contact
 
-## Security Considerations
+For inquiries about licenses, features, or support:
 
-- Keep your PHP and MySQL installations up to date
-- Consider adding HTTPS to your site for better security
-- The admin credentials are securely stored with password hashing
+- Demo: https://go.pelupa.in
+- Contact: https://go.pelupa.in/contact
 
-## Customization
+## ⚖️ License
 
-- Edit `style.css` to change the appearance
-- Modify the `ad-page.php` template to customize the ad pages
-- Adjust the countdown timer by modifying the `secondsLeft` variable in JavaScript
+This is proprietary software. All rights reserved.
 
-## Troubleshooting
+- No redistribution
+- No modification
+- No public sharing
 
-- If short links don't work, check if mod_rewrite is enabled
-- Make sure the .htaccess file was uploaded correctly
-- Check your PHP and MySQL error logs for any issues
-- Verify database connection settings in db.php
+Contact for licensing options.
 
-## License
+---
 
-This software is provided as-is without warranty. You are free to modify and use it for personal or commercial purposes. 
+**Note:** This is a premium solution. For pricing and deployment options, visit https://go.pelupa.in 
