@@ -1,0 +1,81 @@
+RewriteEngine On
+
+# Ensure we're on the correct domain (if needed)
+# RewriteCond %{HTTP_HOST} !^go\.pelupa\.in$ [NC]
+# RewriteRule ^(.*)$ https://go.pelupa.in/$1 [L,R=301]
+
+# Allow direct access to ad-page.php
+RewriteCond %{REQUEST_URI} ^/ad-page\.php$ [NC]
+RewriteCond %{QUERY_STRING} ^link_id=([0-9]+)$ [NC]
+RewriteRule ^(.*)$ ad-page.php [L,QSA]
+
+# Redirect double /go/go/ to single /go/
+RewriteRule ^go/go/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/?$ /go/$1/$2 [R=301,L]
+
+# Redirect /go/username/slug to go.php
+RewriteRule ^go/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/?$ go.php?username=$1&slug=$2 [L,QSA]
+
+# Handle URLs with query parameters
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^go/([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/?\?(.*)$ go.php?username=$1&slug=$2&$3 [L,QSA]
+
+# Legacy support for old URLs (temporary)
+RewriteRule ^go/([a-zA-Z0-9_-]+)$ go.php?slug=$1 [L,QSA]
+
+# Prevent directory listing
+Options -Indexes
+
+# Protect sensitive files
+<FilesMatch "^(db\.php|functions\.php|\.htaccess)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Allow access to admin.php
+<Files "admin.php">
+    Order Allow,Deny
+    Allow from all
+</Files>
+
+# Set default character set
+AddDefaultCharset UTF-8
+
+# Set security headers
+<IfModule mod_headers.c>
+    # Protect against XSS attacks
+    Header set X-XSS-Protection "1; mode=block"
+    # Prevent MIME-sniffing
+    Header set X-Content-Type-Options "nosniff"
+    # Prevent clickjacking
+    Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# PHP settings
+<IfModule mod_php7.c>
+    php_value upload_max_filesize 10M
+    php_value post_max_size 10M
+    php_value max_execution_time 300
+    php_value max_input_time 300
+</IfModule>
+
+# Enable gzip compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/x-javascript application/json
+</IfModule>
+
+# Set browser caching
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/pdf "access plus 1 month"
+    ExpiresByType text/javascript "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType application/x-javascript "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 1 year"
+    ExpiresDefault "access plus 2 days"
+</IfModule> 

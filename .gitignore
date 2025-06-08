@@ -1,0 +1,86 @@
+# Dependencies
+/node_modules
+/vendor
+
+# Environment files
+.env
+.env.*
+config.php
+db.php
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Cache and temporary files
+/cache/
+/tmp/
+*.tmp
+*.temp
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Sensitive configuration files
+**/config/*.php
+**/settings/*.php
+
+# User uploaded content
+/uploads/
+/media/
+
+# Compiled assets
+/dist/
+/build/
+
+# Test files
+/test/
+/tests/
+/testing/
+
+# Documentation
+/docs/
+*.md
+
+# Local development files
+local.*
+*.local
+development.*
+*.development
+
+# Debug files
+debug.*
+*.debug
+
+# Credentials and keys
+*.pem
+*.key
+*.crt
+*.csr
+*.cer
+*.der
+*.priv
+*.pub
+
+# Specific sensitive files
+setup.php
+admin_functions.php
+db_updates.sql 

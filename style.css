@@ -1,0 +1,524 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* For sidebar positioning */
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+    text-align: center;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+h2 {
+    margin: 20px 0;
+    color: #3498db;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Warning Message Styles */
+.warning-message {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 15px 0 20px;
+    text-align: center;
+}
+
+.warning-message strong {
+    color: #e74c3c;
+}
+
+.warning-message p {
+    margin-bottom: 10px;
+}
+
+.warning-message p:last-child {
+    margin-bottom: 0;
+}
+
+.security-message {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Thank You Message */
+.thank-you-message {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 15px 0 20px;
+    text-align: center;
+}
+
+.thank-you-message p {
+    margin-bottom: 10px;
+}
+
+#redirect-timer {
+    font-weight: bold;
+    font-size: 18px;
+    color: #e74c3c;
+}
+
+/* Returning Visitor Message */
+.returning-visitor-message {
+    background-color: #d1ecf1;
+    color: #0c5460;
+    border: 1px solid #bee5eb;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0 0 20px;
+    text-align: center;
+}
+
+/* Progress Bar */
+.progress-bar {
+    width: 100%;
+    height: 15px;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: #4CAF50;
+    width: 0%;
+    transition: width 0.5s ease;
+    border-radius: 10px;
+}
+
+/* Scanning Animation */
+.scanning-animation {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.scanning-status {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.scanning-icon {
+    display: inline-block;
+    animation: rotating 2s linear infinite;
+    margin-right: 5px;
+    color: #3498db;
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.success-message {
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+/* Share Container */
+.share-container {
+    text-align: center;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+.share-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.share-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.share-btn.facebook {
+    background-color: #3b5998;
+}
+
+.share-btn.twitter {
+    background-color: #1da1f2;
+}
+
+.share-btn.whatsapp {
+    background-color: #25d366;
+}
+
+.share-btn:hover {
+    opacity: 0.9;
+}
+
+/* Featured Ad */
+.featured-ad {
+    border: 2px solid #e74c3c;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fdf2f2;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="url"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.btn {
+    display: inline-block;
+    background: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background 0.3s;
+    text-align: center;
+}
+
+.btn:hover {
+    background: #2980b9;
+    text-decoration: none;
+}
+
+.btn:disabled {
+    background: #95a5a6;
+    cursor: not-allowed;
+}
+
+.primary-btn {
+    background-color: #28a745;
+}
+
+.primary-btn:hover {
+    background-color: #218838;
+}
+
+.secondary-btn {
+    background-color: #6c757d;
+}
+
+.secondary-btn:hover {
+    background-color: #5a6268;
+}
+
+/* Message Styles */
+.error, .success {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+.destination-url {
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* Admin Header */
+.admin-header {
+    text-align: right;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Ad Page Styles */
+.ad-page {
+    text-align: center;
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.countdown-container {
+    margin: 30px 0;
+    font-size: 18px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    z-index: 10;
+    position: relative;
+}
+
+#timer {
+    font-weight: bold;
+    color: #e74c3c;
+    font-size: 22px;
+}
+
+/* Ad Container Styles */
+.ad-container {
+    margin: 20px auto;
+    width: 100%;
+    max-width: 728px;
+}
+
+.placeholder-ad {
+    background-color: #eee;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed #ccc;
+    border-radius: 4px;
+    color: #888;
+}
+
+.placeholder-ad.small {
+    height: 120px;
+}
+
+.placeholder-ad.sidebar {
+    height: 600px;
+    width: 160px;
+}
+
+/* Top Banner Ad */
+.top-banner {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/* Middle Banner Ad */
+.middle-banner {
+    margin: 20px auto;
+}
+
+/* Bottom Banner Ad */
+.bottom-banner {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+/* Sidebar Ads */
+.left-sidebar {
+    position: absolute;
+    left: -180px;
+    top: 200px;
+    width: 160px;
+}
+
+.right-sidebar {
+    position: absolute;
+    right: -180px;
+    top: 200px;
+    width: 160px;
+}
+
+/* In-Page Push Notification */
+.in-page-push {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    max-width: 100%;
+    z-index: 100;
+}
+
+/* Footer Ad */
+.footer-ad {
+    margin-top: 20px;
+}
+
+/* Copy Success Message */
+.copy-success {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #2ecc71;
+    color: white;
+    border-radius: 4px;
+    z-index: 1000;
+    animation: fadeOut 2s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    70% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Login Form */
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Create Link Form */
+.create-link {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 30px;
+}
+
+/* Disclaimer */
+.disclaimer {
+    font-size: 12px;
+    color: #7f8c8d;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+    .left-sidebar, .right-sidebar {
+        position: static;
+        width: 100%;
+        max-width: 728px;
+        margin: 20px auto;
+    }
+    
+    .placeholder-ad.sidebar {
+        height: 250px;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    table, th, td {
+        font-size: 14px;
+    }
+    
+    th, td {
+        padding: 8px 10px;
+    }
+    
+    .destination-url {
+        max-width: 150px;
+    }
+    
+    .in-page-push {
+        width: 250px;
+    }
+    
+    .button-container {
+        flex-direction: column;
+    }
+    
+    .share-buttons {
+        flex-wrap: wrap;
+    }
+} 
